@@ -1,8 +1,45 @@
 <!-- templates/post_detail.html -->
 {% extends 'base.html' %}
+
 {% block content %}
+<style>
+.post-entry {
+  background-color: #FCE6E0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.post-entry h2 {
+  font-size: 24px;
+  color: #FF6B6B;
+  margin-bottom: 10px;
+}
+
+.post-entry p {
+  font-size: 16px;
+  color: #FFB6A0;
+}
+
+.post-entry a {
+  color: #FFFFFF;
+  background-color: #FF6B6B;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.post-entry a:hover {
+  background-color: #FF4D4D;
+}
+</style>
+
 <div class="post-entry">
 <h2>{{ object.title }}</h2>
 <p>{{ object.body }}</p>
+<a href="{% url 'edit' blog.pk %}">+ Edit Blog Post</a>
+<a href="{% url 'delete' blog.pk %}">Delete</a>
 </div>
 {% endblock content %}

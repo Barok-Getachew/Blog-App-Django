@@ -1,0 +1,43 @@
+<!-- templates/post_edit.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+.edit-form {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FCE6E0;
+  border-radius: 5px;
+}
+
+.edit-form h1 {
+  font-size: 24px;
+  color: #f3f1f1;
+  margin-bottom: 20px;
+}
+
+.edit-form input[type="submit"] {
+  background-color: #FF6B6B;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-form input[type="submit"]:hover {
+  background-color: #FF4D4D;
+}
+</style>
+
+<div class="edit-form">
+  <h1>Edit post</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+  </form>
+</div>
+{% endblock content %}
