@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style> .login-form { max-width: 300px; margin: 30px auto; padding: 20px; border-radius: 5px; } h2 { text-align: center; } form { display: flex; flex-direction: column; } button { background: rgb(204, 117, 4); color: white; padding: 10px 15px; border: none; border-radius: 5px; } </style> <div class="login-form"> <h2>Log In</h2> <form method="post">
+{%csrf_token%}
+{{ form.as_p }}
+
+<button type="submit">Log In</button>
+</form> </div>
+{% endblock %}
