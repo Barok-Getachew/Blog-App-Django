@@ -1,6 +1,6 @@
 kdown
 Copy
-# Django Blog App
+# Django Blog- App
 
 The Django Blog App is a web application built using the Django framework, allowing users to create, manage, and view blog posts.
 
